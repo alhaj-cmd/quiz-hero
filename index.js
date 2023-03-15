@@ -14,6 +14,7 @@ let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
 
 // EventListener for quiz start button
+
 startQuiz.addEventListener("click", () => {
   let countDown = document.querySelector("#countDownContainer");
   let counter = document.querySelector("#counter");
@@ -22,9 +23,10 @@ startQuiz.addEventListener("click", () => {
   countDown.classList.add("flex");
 
   let x = setInterval(() => {
+    // console.log(x)
     if (counterNum < 0) {
-      coutDown.classList.remove("flex");
-      coutDown.classList.add("hidden");
+      countDown.classList.add("hidden");
+      countDown.classList.remove("flex");
       counterNum = 3;
       count = 0;
       timer = null;
@@ -46,18 +48,18 @@ startQuiz.addEventListener("click", () => {
 // All quiz data fetched from json
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
-  const data = await res.json;
+  const data = await res.json();
   quizData = data;
-  displayQuiz(data);
+ console.log(data);
 };
 
 // Displaying quiz on quiz page
 const displayQuiz = (data) => {
-  if (!data) {
-    quizContainer.innerHTML = "";
-    return;
-  }
-
+  // if (!data) {
+  //   quizContainer.innerHTML = "";
+  //   return;
+  // }
+console.log(data)
   data.forEach((quiz, i) => {
     quizContainer.innerHTML += `<div class="m-3 py-3 px-4 shadow-sm rounded">
   <div class="flex items-center">
@@ -74,7 +76,7 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+document.querySelector("#submit").addEventlistener('click', () => {
   if (answers.length < 6) {
     return;
   }
