@@ -1,37 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Some important Question and answer list</title>
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.4/dist/full.css" rel="stylesheet" type="text/css" />
 
 
 </head>
+
 <body>
-    <ul class="menu menu-vertical lg:menu-horizontal bg-base-100 rounded-box">
-        <li>
-            <a>Item 1</a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In, maxime? Quidem, accusamus aspernatur suscipit, reprehenderit voluptatibus sint corrupti id laudantium sapiente quod molestiae odio veritatis nulla dolores harum nostrum optio.</p></li>
-        <li>
-            <a>Item 2</a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat iste mollitia illum laboriosam ipsum pariatur quos, id aliquam modi doloremque numquam voluptatibus beatae! Inventore reprehenderit rem voluptates dicta amet ipsam!</p></li>
-        <li>
-            <a>Item 3</a>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, animi porro aliquid inventore, deleniti laboriosam beatae voluptate error unde voluptatibus ut nisi assumenda quia magnam, libero est quam ratione nemo?</p></li>
-      </ul>
-      <ul class="menu menu-vertical lg:menu-horizontal bg-base-100 rounded-box">
-        <li>
-            <a>Item 1</a>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae, necessitatibus. Eum ullam minima, voluptatem deleniti minus quidem nobis. Iste neque aperiam voluptatibus? Ut aliquam deserunt eos distinctio sed aperiam facilis.</p></li>
-        <li>
-             <a>Item 2</a>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius ipsam, magnam voluptatibus tempore error, eveniet aperiam accusamus natus mollitia repellendus deserunt aliquid culpa quos possimus rerum. Inventore quia possimus consequatur.</p>
-         </li>
-        
-        
-      </ul>
+    <ul class="menu menu-vertical lg:menu-horizontal bg-base-100 rounded-box m-8 ">
+       
+       <div>
+        <!-- Question number one -->
+        <h2 class="text-2xl font-bold"> <span class="text-orange-600 underline underline-offset-2">Quiz-1:</span> .forEach(), .map(), .filter(), and .find() .... What's the difference?</h2>
+        <!-- foreach quiz start -->
+       <li>
+
+           <a class="text-xl underline font-extrabold">.forEach()</a>
+           <p class=" font-semibold text-lg"><span class="text-orange-600">.forEach()</span>, is used to execute the same code on every element in an array but does not change the array
+               and it returns undefined.</p>
+               <p class="font-semibold text-lg "> <span class="underline">Example:</span> .<span class="text-orange-600">.forEach()</span> to iterate over an array of food and log that we would want to eat each of them</p>
+           <img src="./images/foreach.png" alt="">
+       </li>
+       <!-- foreach quiz end -->
+       <!-- map quiz start -->
+       <li>
+           <a class="text-xl underline font-extrabold">.map():</a>
+           <p class=" font-semibold text-lg"><span class="text-orange-600">.map()</span> executes the same code on every element in an array and returns a new array with the updated elements.</p>
+               <p class="font-semibold text-lg "> <span class="underline">Example:</span> <span class="text-orange-600">.map()</span> to iterate over the elements of the Budget array and divide each element by 10, then assign our new array containing the new Budget to the variable Budget.</p>
+           <img src="./images/map.png" alt="">
+       </li>
+       <!-- map quiz end -->
+       <!-- filter start -->
+       <li>
+        <a class="text-xl underline font-extrabold">.filter():</a>
+        <p class=" font-semibold text-lg"><span class="text-orange-600">.filter()</span> checks every element in an array to see if it meets a certain criteria and returns a new array with the elements that return truthy for the criteria.</p>
+            <p class="font-semibold text-lg "> <span class="underline">Example:</span> <span class="text-orange-600">.filter()</span>In the example below we would use .filter to return values that are less than 200.</p>
+        <img src="./images/filter.png" alt="">
+    </li>
+    <!-- filter end -->
+    <!-- find quiz start -->
+    <li>
+        <a class="text-xl underline font-extrabold">.find():</a>
+        <p class=" font-semibold text-lg"><span class="text-orange-600">.find()</span> checks every element find in a object to see if it meets a certain criteria and returns a property of the  name or value with the elements that return truthy for the criteria.</p>
+            <p class="font-semibold text-lg "> <span class="underline">Example:</span> <span class="text-orange-600">.find()</span>In the example below we would use .find() returns the descendants of the selected elements that match the selector.</p>
+        <img src="./images/find.png" alt="">
+    </li>
+       </div>
+       <!-- Quiz two start -->
+       <div class="mt-8">
+        <h2 class="text-2xl font-bold"> <span class="text-orange-600 underline underline-offset-2">Quiz-2:</span> Difference Between Local Storage, Session Storage, And Cookies?</h2>
+      <div class="grid gap-4 grid-cols-3 border p-4 mt-8">
+          <div>
+              <p class="text-xl  underline font-extrabold">Local Storage</p>
+              <div class="text-lg  font-bold p-4">
+                <p>1.The client  can only read local storage</p>
+                <p>2.There is no transfer of data to the server</p>
+                <p>3.There are fewer old browsers that support it</p>
+                <p>4.As it is not session-based, it must be deleted via javascript or manually </p>
+              </div>
+          </div>
+          <div>
+              <p class="text-xl underline font-extrabold"> Session Storage</p>
+              <div class="text-lg  font-bold p-4">
+                <p>1.It's Browser The client  can only read Session storage</p>
+                <p>2.There is no transfer of data to the server</p>
+                <p>3.There are fewer old browsers that support it</p>
+                <p>4.It's offline can't read online </p>
+              </div>
+          </div>
+          <div>
+              <p class="text-xl underline font-extrabold">Cookies </p>
+              <div class="text-lg  font-bold p-4">
+                <p>1.Both clients and servers can read and write the cookies</p>
+                <p>2.Data transfer to the server is exist</p>
+                <p>3.It is supported by all the browser including older browser</p>
+                <p>4.Cookies expire based on the setting and working per tab and window </p>
+
+              </div>
+          </div>
+    </div>
+       </div>
+       <!-- quiz-three -->
+       <div class="my-8">
+        <h2 class="text-2xl font-bold my-6"> <span class="text-orange-600 underline underline-offset-2">Quiz-3:</span> what is eventLoop? How does it work ?</h2>
+        <img src="./images/loop.png" alt="">
+        <p class="text-lg  font-bold">The event loop is the secret behind JavaScript’s asynchronous programming. JS executes all operations on a single thread, but using a few smart data structures, it gives us the illusion of multi-threading.</p>
+        <p class="text-lg  font-bold">Event loops are used in many different types of applications, such as graphical user interfaces, network servers, and web applications. They provide a flexible and efficient way to manage asynchronous events and ensure that the program responds quickly and efficiently to user input and other events.</p>
+      
+       </div>
+    
+    </ul>
+
     <script src="https://cdn.tailwindcss.com"></script>
 </body>
+
 </html>
